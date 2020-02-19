@@ -7,8 +7,6 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Books from "./components/Books";
 import About from "./components/About";
-import Contact from "./components/Contact";
-import Policy from "./components/Policy";
 import BookCart from "./components/BookCart";
 import BookDetails from "./components/BookDetails";
 
@@ -29,8 +27,6 @@ function App() {
             )}
           />
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/policy" component={Policy} />
           <Route path="/book-cart" component={BookCart} />
           <Route path="/book/details/:id" component={BookDetails} />
         </Switch>

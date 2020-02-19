@@ -1,5 +1,3 @@
-# Simple ReactJS Bookstore Cart Application
-
 ## What is in the Repo
 
 This Project is a Simple ReactJS Application which demonstrates the following
@@ -16,11 +14,11 @@ This Project is a Simple ReactJS Application which demonstrates the following
 
 **_This project is part of my React cardio session. It can be used to build bigger projects_**
 
-## Live Application URL
+## Repository URL
 
-#### https://ekamid.github.io/react-bookstore-cart/
+#### https://github.com/ekamid/react-bookstore-cart
 
-## Prerequisites
+# Prerequisites
 
 ### Install Node JS
 

@@ -23,12 +23,6 @@ const Navbar = () => {
           <Link className="p-2 text-dark" to="/about">
             About
           </Link>
-          <Link className="p-2 text-dark" to="/contact">
-            Contact
-          </Link>
-          <Link className="p-2 text-dark" to="/policy">
-            Policy
-          </Link>
         </nav>
         <Link className="btn btn-outline-primary" to="/book-cart">
           Book Cart
