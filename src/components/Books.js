@@ -49,7 +49,7 @@ const Books = props => {
               {heading}
             </h1>
             <div className="row">
-              {props.keywords === ""
+              {props.keywords === "" || null
                 ? value.books.map(book => {
                     const { id } = book;
                     return <Book key={id} bookDetails={book} />;

@@ -5,20 +5,19 @@ const Header = props => {
   const { getKeywords } = props;
 
   const handleChange = e => {
-    setKeywords(e.target.value.trim());
+    setKeywords(e.target.value);
   };
 
   const handleSubmit = () => {
-    getKeywords(keywords);
+    const string = keywords.trim().replace(/\s\s+/g, " ");
+    getKeywords(string);
     setKeywords("");
   };
 
   return (
     <div className="container search-header px-3 py-3 mx-auto text-center">
       <h1 className="display-4">Search Books</h1>
-      <p className="lead">
-        Search For the book you want buy using book title, author name or isbn
-      </p>
+      <p className="lead">Search For the book using book title</p>
       <form
         onSubmit={e => {
           e.preventDefault();
