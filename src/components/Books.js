@@ -34,7 +34,7 @@ const Books = props => {
       setHeading("Searching for '" + keywords + "'");
     }
     searchBooks(books, keywords);
-  }, [props.keywords]);
+  }, [props.keywords, books]);
 
   return (
     <Consumer>

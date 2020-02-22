@@ -8,8 +8,8 @@ const BookCartCheckOut = () => {
 
   const getSubtotal = (carts, books) => {
     let subtotal = 0;
-    carts.map(cart => {
-      books.map(book => {
+    carts.forEach(cart => {
+      books.forEach(book => {
         if (book.id === cart.id) {
           subtotal = subtotal + book.price * cart.quantity;
         }

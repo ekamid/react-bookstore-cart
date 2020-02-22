@@ -3,10 +3,11 @@ import booksData from "./data/books.json";
 const Context = React.createContext();
 
 const reducer = (state, action) => {
+  const { carts } = state;
+  let cartIndex;
   switch (action.type) {
     case "ADD_CART":
-      let { carts } = state;
-      let cartIndex = carts.findIndex(cart => cart.id === action.payload);
+      cartIndex = carts.findIndex(cart => cart.id === action.payload);
       if (cartIndex !== -1) {
         carts[cartIndex].quantity = carts[cartIndex].quantity + 1;
         return {
@@ -21,14 +22,13 @@ const reducer = (state, action) => {
       }
 
     case "UPDATE_CART_QUANTITY":
-      let allCarts = state.carts;
-      let i = allCarts.findIndex(cart => cart.id === action.payload.id);
-      if (i !== -1) {
-        allCarts[i].quantity = action.payload.quantity;
+      cartIndex = carts.findIndex(cart => cart.id === action.payload.id);
+      if (cartIndex !== -1) {
+        carts[cartIndex].quantity = action.payload.quantity;
       }
       return {
         ...state,
-        carts: [...allCarts]
+        carts: [...carts]
       };
     case "REMOVE_CART":
       return {
