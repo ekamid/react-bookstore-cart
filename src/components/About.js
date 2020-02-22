@@ -33,7 +33,11 @@ const About = () => {
       <div class="card-footer">
         <h5 className="display-5 text-center">
           A React Project By &copy;{" "}
-          <a href="https://github.com/ekamid" target="_blank">
+          <a
+            href="https://github.com/ekamid"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             github/ekamid
           </a>
         </h5>

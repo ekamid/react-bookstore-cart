@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
@@ -11,6 +11,11 @@ import BookCart from "./components/BookCart";
 import BookDetails from "./components/BookDetails";
 
 function App() {
+  const [keywords, setKeywords] = useState("");
+  const getKeywords = keywords => {
+    setKeywords(keywords);
+  };
+
   return (
     <Provider>
       <div className="App">
@@ -21,8 +26,8 @@ function App() {
             path="/"
             render={() => (
               <Fragment>
-                <Header />
-                <Books />
+                <Header getKeywords={getKeywords} />
+                <Books keywords={keywords} />
               </Fragment>
             )}
           />

@@ -20,7 +20,7 @@ const reducer = (state, action) => {
         };
       }
 
-    case "CHANGE_CART_QUANTITY":
+    case "UPDATE_CART_QUANTITY":
       let allCarts = state.carts;
       let i = allCarts.findIndex(cart => cart.id === action.payload.id);
       if (i !== -1) {

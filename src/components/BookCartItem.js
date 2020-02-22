@@ -9,7 +9,7 @@ const BookCartItem = ({ cart }) => {
 
   const sendToCartState = (id, quantity, dispatch) => {
     dispatch({
-      type: "CHANGE_CART_QUANTITY",
+      type: "UPDATE_CART_QUANTITY",
       payload: { id, quantity }
     });
   };
