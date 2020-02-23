@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df0e386006cb224de51b8e3ae3a80dfc",
+    "revision": "a4c01ecf0c3d09e64884aacf24b235a6",
     "url": "/react-bookstore-cart/index.html"
   },
   {
-    "revision": "4e4d43b7ed3f53f0493f",
+    "revision": "6a38bb9d6bfa84cdb27f",
     "url": "/react-bookstore-cart/static/css/main.9c7dfb6a.chunk.css"
   },
   {
-    "revision": "651a9ba3383c5a69be5b",
-    "url": "/react-bookstore-cart/static/js/2.12ded09c.chunk.js"
+    "revision": "9068e3e710947552538e",
+    "url": "/react-bookstore-cart/static/js/2.5dbeaf07.chunk.js"
   },
   {
     "revision": "61460a9918638f89da762dcefb150768",
-    "url": "/react-bookstore-cart/static/js/2.12ded09c.chunk.js.LICENSE.txt"
+    "url": "/react-bookstore-cart/static/js/2.5dbeaf07.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e4d43b7ed3f53f0493f",
-    "url": "/react-bookstore-cart/static/js/main.1ba8d370.chunk.js"
+    "revision": "6a38bb9d6bfa84cdb27f",
+    "url": "/react-bookstore-cart/static/js/main.7ea8fc8e.chunk.js"
   },
   {
     "revision": "79c08841c863220d0bb5",
