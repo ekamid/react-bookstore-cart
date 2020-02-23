@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Consumer } from "../Context";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../context/Context";
 import Book from "./Book";
 
 const Books = props => {
   const [heading, setHeading] = useState("All Books");
-  const [books, setBooks] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
   const [searchedBooks, setSearchedBooks] = useState([]);
+  const { books } = useContext(Context);
 
   const searchBooks = (books, keywords) => {
     const searchedBooks = [];
@@ -32,37 +33,41 @@ const Books = props => {
     const keywords = props.keywords;
     if (keywords !== "") {
       setHeading("Searching for '" + keywords + "'");
+      setIsSearching(true);
     }
     searchBooks(books, keywords);
   }, [props.keywords, books]);
 
   return (
-    <Consumer>
-      {value => {
-        setBooks(value.books);
-        return (
-          <div className="container">
-            <h1
-              style={{ marginLeft: "20px", color: "#000" }}
-              className="display-4 text-center mb-3"
-            >
-              {heading}
-            </h1>
-            <div className="row">
-              {props.keywords === "" || null
-                ? value.books.map(book => {
-                    const { id } = book;
-                    return <Book key={id} bookDetails={book} />;
-                  })
-                : searchedBooks.map(book => {
-                    const { id } = book;
-                    return <Book key={id} bookDetails={book} />;
-                  })}
-            </div>
-          </div>
-        );
-      }}
-    </Consumer>
+    <div className="container">
+      <h1
+        style={{ marginLeft: "20px", color: "#000" }}
+        className="display-4 text-center mb-3"
+      >
+        {heading}
+        {isSearching ? (
+          <button
+            className="btn btn-danger text-white border-0"
+            onClick={() => window.location.reload()}
+          >
+            X
+          </button>
+        ) : (
+          <React.Fragment></React.Fragment>
+        )}
+      </h1>
+      <div className="row">
+        {props.keywords === "" || null
+          ? books.map(book => {
+              const { id } = book;
+              return <Book key={id} bookDetails={book} />;
+            })
+          : searchedBooks.map(book => {
+              const { id } = book;
+              return <Book key={id} bookDetails={book} />;
+            })}
+      </div>
+    </div>
   );
 };
 
