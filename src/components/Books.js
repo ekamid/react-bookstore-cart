@@ -1,42 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import { Context } from "../context/Context";
 import Book from "./Book";
 
-const Books = props => {
-  const [heading, setHeading] = useState("All Books");
-  const [isSearching, setIsSearching] = useState(false);
-  const [searchedBooks, setSearchedBooks] = useState([]);
-  const { books } = useContext(Context);
-
-  const searchBooks = (books, keywords) => {
-    const searchedBooks = [];
-
-    books.forEach(book => {
-      let title = book.title.toLowerCase();
-      let keywordList = keywords.toLowerCase().split(" ");
-
-      for (let i = 0; i < keywordList.length; i++) {
-        var pattern = new RegExp(
-          "(<=\\s|\\b)" + keywordList[i] + "(?=[]\\b|\\s|$)"
-        );
-        if (pattern.test(title) === true) {
-          searchedBooks.push(book);
-          break;
-        }
-      }
-    });
-
-    setSearchedBooks(searchedBooks);
-  };
-
-  useEffect(() => {
-    const keywords = props.keywords;
-    if (keywords !== "") {
-      setHeading("Searching for '" + keywords + "'");
-      setIsSearching(true);
-    }
-    searchBooks(books, keywords);
-  }, [props.keywords, books]);
+const Books = () => {
+  const { books, clearSearch, searchedBooks, searchString } = useContext(
+    Context
+  );
 
   return (
     <div className="container">
@@ -44,20 +13,21 @@ const Books = props => {
         style={{ marginLeft: "20px", color: "#000" }}
         className="display-4 text-center mb-3"
       >
-        {heading}
-        {isSearching ? (
-          <button
-            className="btn btn-danger text-white border-0"
-            onClick={() => window.location.reload()}
-          >
-            X
-          </button>
+        {searchString === null ? (
+          "All Books"
         ) : (
-          <React.Fragment></React.Fragment>
+          <Fragment>
+            {" "}
+            Searching for '{searchString}'
+            <span onClick={() => clearSearch()} class="btn btn-danger ml-2">
+              X
+            </span>
+          </Fragment>
         )}
       </h1>
+
       <div className="row">
-        {props.keywords === "" || null
+        {searchedBooks.length === 0
           ? books.map(book => {
               const { id } = book;
               return <Book key={id} bookDetails={book} />;

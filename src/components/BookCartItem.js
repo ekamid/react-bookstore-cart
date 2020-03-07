@@ -11,10 +11,6 @@ const BookCartItem = ({ cart }) => {
   const book = books.filter(book => book.id === id);
   const { title, coverImageSrc, price, authorName, authorId } = book[0];
 
-  const handleCartUpdate = () => {
-    updateCart(id, newQuantity);
-  };
-
   const handleCartRemove = () => {
     removeCart(id);
   };
@@ -42,6 +38,7 @@ const BookCartItem = ({ cart }) => {
             onChange={e => {
               if (e.target.value > 0) {
                 setNewQuantity(e.target.value);
+                updateCart(id, e.target.value);
               }
             }}
             className="input-group w-25 text-center m-auto border border-info rounded-lg"
@@ -50,9 +47,6 @@ const BookCartItem = ({ cart }) => {
           />
         </div>
         <div className="col-lg-3 col-md-3 col-sm-12 col-12">
-          <button onClick={handleCartUpdate} className="btn btn-outline-info">
-            Update
-          </button>
           <button onClick={handleCartRemove} className="btn btn-outline-danger">
             Remove
           </button>

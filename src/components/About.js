@@ -12,8 +12,10 @@ const About = () => {
       .then(text => {
         setMarkDownText(text);
       });
-  });
-  console.log(markDownText);
+
+    document.title = "About || React BookStore App";
+  }, []);
+
   return (
     <div class="card container border-0">
       <div class="card-body">

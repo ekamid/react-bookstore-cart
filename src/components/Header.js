@@ -1,48 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import Search from "./Search";
 
-const Header = props => {
-  const [keywords, setKeywords] = useState("");
-  const { getKeywords } = props;
-
-  const handleChange = e => {
-    setKeywords(e.target.value);
-  };
-
-  const handleSubmit = () => {
-    const string = keywords.trim().replace(/\s\s+/g, " ");
-    getKeywords(string);
-    setKeywords("");
-  };
-
+const Header = () => {
   return (
     <div className="container search-header px-3 py-3 mx-auto text-center">
       <h1 className="display-4">Search Books</h1>
       <p className="lead">Search For the book using book title</p>
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          handleSubmit();
-        }}
-      >
-        <input
-          onChange={handleChange}
-          style={{ width: "50%" }}
-          className="form-control py-4 m-auto"
-          type="search"
-          placeholder="e.g. The Prophet"
-          value={keywords}
-        />
-        <input
-          onClick={e => {
-            e.preventDefault();
-            handleSubmit();
-          }}
-          style={{ fontSize: "1.3rem" }}
-          className="btn btn-outline-primary my-3 px-3"
-          type="button"
-          value="Search"
-        />
-      </form>
+      <Search />
     </div>
   );
 };

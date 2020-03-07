@@ -39,6 +39,24 @@ export default (state, action) => {
         ...state,
         carts: state.carts.filter(cart => cart.id !== action.payload)
       };
+    case "GET_SEARCHED_STRING":
+      return {
+        ...state,
+        searchString: action.payload.trim() === "" ? null : action.payload
+      };
+    case "GET_SEARCHED_BOOKS":
+      const reg = new RegExp(`${action.payload}`, "gi");
+      return {
+        ...state,
+        searchedBooks: state.books.filter(book => book.title.match(reg))
+      };
+
+    case "CLEAR_SEARCH":
+      return {
+        ...state,
+        searchString: null,
+        searchedBooks: [],
+      };
 
     default:
       return state;
