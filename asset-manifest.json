@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/react-bookstore-cart/static/css/main.9c7dfb6a.chunk.css",
-    "main.js": "/react-bookstore-cart/static/js/main.7ea8fc8e.chunk.js",
-    "main.js.map": "/react-bookstore-cart/static/js/main.7ea8fc8e.chunk.js.map",
+    "main.js": "/react-bookstore-cart/static/js/main.90f189e1.chunk.js",
+    "main.js.map": "/react-bookstore-cart/static/js/main.90f189e1.chunk.js.map",
     "runtime-main.js": "/react-bookstore-cart/static/js/runtime-main.e607833a.js",
     "runtime-main.js.map": "/react-bookstore-cart/static/js/runtime-main.e607833a.js.map",
-    "static/js/2.5dbeaf07.chunk.js": "/react-bookstore-cart/static/js/2.5dbeaf07.chunk.js",
-    "static/js/2.5dbeaf07.chunk.js.map": "/react-bookstore-cart/static/js/2.5dbeaf07.chunk.js.map",
+    "static/js/2.05794b5c.chunk.js": "/react-bookstore-cart/static/js/2.05794b5c.chunk.js",
+    "static/js/2.05794b5c.chunk.js.map": "/react-bookstore-cart/static/js/2.05794b5c.chunk.js.map",
     "index.html": "/react-bookstore-cart/index.html",
-    "precache-manifest.3cb146da138bea3b0afaeca66f643725.js": "/react-bookstore-cart/precache-manifest.3cb146da138bea3b0afaeca66f643725.js",
+    "precache-manifest.2d90e898275f603a3182e035390e1ae1.js": "/react-bookstore-cart/precache-manifest.2d90e898275f603a3182e035390e1ae1.js",
     "service-worker.js": "/react-bookstore-cart/service-worker.js",
     "static/css/main.9c7dfb6a.chunk.css.map": "/react-bookstore-cart/static/css/main.9c7dfb6a.chunk.css.map",
-    "static/js/2.5dbeaf07.chunk.js.LICENSE.txt": "/react-bookstore-cart/static/js/2.5dbeaf07.chunk.js.LICENSE.txt",
+    "static/js/2.05794b5c.chunk.js.LICENSE.txt": "/react-bookstore-cart/static/js/2.05794b5c.chunk.js.LICENSE.txt",
     "static/media/README.md": "/react-bookstore-cart/static/media/README.677a4c13.md"
   },
   "entrypoints": [
     "static/js/runtime-main.e607833a.js",
-    "static/js/2.5dbeaf07.chunk.js",
+    "static/js/2.05794b5c.chunk.js",
     "static/css/main.9c7dfb6a.chunk.css",
-    "static/js/main.7ea8fc8e.chunk.js"
+    "static/js/main.90f189e1.chunk.js"
   ]
 }
