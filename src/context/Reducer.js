@@ -55,7 +55,7 @@ export default (state, action) => {
       return {
         ...state,
         searchString: null,
-        searchedBooks: [],
+        searchedBooks: []
       };
 
     default:

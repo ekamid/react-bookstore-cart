@@ -86,7 +86,8 @@ export const Provider = ({ children }) => {
         removeCart,
         getSearchString,
         getSearchedBooks,
-        clearSearch
+        clearSearch,
+        fetchCarts
       }}
     >
       {children}

@@ -64,3 +64,10 @@ button {
     height: 400px;
   }
 }
+
+
+/* @media screen and (max-width: 667px) {
+  .search-header {
+    margin-top: 10px;
+  }
+} */

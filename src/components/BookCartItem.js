@@ -39,6 +39,10 @@ const BookCartItem = ({ cart }) => {
               if (e.target.value > 0) {
                 setNewQuantity(e.target.value);
                 updateCart(id, e.target.value);
+              } else {
+                alert("Please enter a value greater than or equal to 1");
+                setNewQuantity(1);
+                updateCart(id, 1);
               }
             }}
             className="input-group w-25 text-center m-auto border border-info rounded-lg"

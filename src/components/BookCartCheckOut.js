@@ -54,7 +54,9 @@ const BookCartCheckOut = () => {
               <td>
                 <button
                   className="btn btn-outline-info"
-                  onClick={() => alert("Checking out")}
+                  onClick={() => {
+                    alert("Checking out");
+                  }}
                 >
                   Checkout
                 </button>
